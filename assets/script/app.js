@@ -101,7 +101,7 @@ btnEqual.addEventListener('click', () => {
 });
 
 // Si on appuie sur entrée calculer l'opération
-body.addEventListener('keyup', (e) => {
+body.addEventListener('keypress', (e) => {
     if (e.key === 'Enter') {
         const operation = screen.value;
         const result = eval(operation);
@@ -114,22 +114,73 @@ body.addEventListener('keyup', (e) => {
 });
 
 // Transformer les x par des *
-body.addEventListener('keyup', (e) => {
+body.addEventListener('keypress', (e) => {
     if (e.key === 'x') {
         screen.value = screen.value.replace('x', '*');
     }
 });
 
 // Interdire les lettres
-body.addEventListener('keyup', (e) => {
+body.addEventListener('keypress', (e) => {
     if (isNaN(e.key)) {
         screen.value = screen.value.replace(e.key, '');
     }
-});
+}); 
 
-// Autoriser les *, /, +, -
-body.addEventListener('keyup', (e) => {
-    if (e.key === '*' || e.key === '/' || e.key === '+' || e.key === '-') {
-        screen.value += e.key;
+// Activer le input avec le clavier
+body.addEventListener('keypress', (e) => {
+    // if screen est active
+    if (screen != document.activeElement) {
+        if (e.key === '0') {
+            screen.value += e.key;
+        }
+        if (e.key === '1') {
+            screen.value += e.key;
+        }
+        if (e.key === '2') {
+            screen.value += e.key;
+        }
+        if (e.key === '3') {
+            screen.value += e.key;
+        }
+        if (e.key === '4') {
+            screen.value += e.key;
+        }
+        if (e.key === '5') {
+            screen.value += e.key;
+        }
+        if (e.key === '6') {
+            screen.value += e.key;
+        }
+        if (e.key === '7') {
+            screen.value += e.key;
+        }
+        if (e.key === '8') {
+            screen.value += e.key;
+        }
+        if (e.key === '9') {
+            screen.value += e.key;
+        }
+        if (e.key === '/') {
+            screen.value += e.key;
+        }
+        if (e.key === '*') {
+            screen.value += e.key;
+        }
+        if (e.key === '-') {
+            screen.value += e.key;
+        }
+        if (e.key === '+') {
+            screen.value += e.key;
+        }
+        if (e.key === 'Backspace') {
+            screen.value = screen.value.slice(0, -1);
+        }
+        if (e.key === '(') {
+            screen.value += e.key;
+        }
+        if (e.key === ')') {
+            screen.value += e.key;
+        }
     }
 });
