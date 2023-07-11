@@ -1,13 +1,13 @@
-#Calculate me
+# Calculate me
 
-##Missions
+## Missions
 
-###Javascript
+### Javascript
 - Construire le DOM en javascript
 - Transformer un caractère par un autre
 
-###CSS
+### CSS
 - Pratique du glassmorphisme
 
-##But
+## But
 Construire une calculatrice web puis l'adapter sous forme d'application mobile
