@@ -119,3 +119,17 @@ body.addEventListener('keyup', (e) => {
         screen.value = screen.value.replace('x', '*');
     }
 });
+
+// Interdire les lettres
+body.addEventListener('keyup', (e) => {
+    if (isNaN(e.key)) {
+        screen.value = screen.value.replace(e.key, '');
+    }
+});
+
+// Autoriser les *, /, +, -
+body.addEventListener('keyup', (e) => {
+    if (e.key === '*' || e.key === '/' || e.key === '+' || e.key === '-') {
+        screen.value += e.key;
+    }
+});
