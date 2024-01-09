@@ -27,7 +27,7 @@ body{
     background: none;
     font-size: 42pt;
     text-align: end;
-    border: none;
+    border: 1px solid #ccc;
 }
 
 .calculatrice .pad{
